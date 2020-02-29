@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Vertical (basic) form</h2>
+    <form *ngIf="!voterSent" #form="ngForm" (ngSubmit)="submitVoter(form)" class="m-2">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required #name="ngModel" [(ngModel)]="voter.name">
+      </div>
+
+      <div class="form-group">
+        <label for="vin">VIN:</label>
+        <input type="number" class="form-control" id="vin" placeholder="Enter vin" name="vin" required #vin="ngModel" [(ngModel)]="voter.vin">
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" required #city="ngModel" [(ngModel)]="voter.city">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required #password="ngModel" [(ngModel)]="voter.password">
+      </div>
+
+
+      <div class="form-group">
+        <label>Upload VIC:</label>
+        <input type="file" class="form-control" (change)="onFileChanged($event)" >
+        <input type="button" value="Upload" (click)="onUpload()" value="upload">
+
+      </div>
+      
+      <button type="submit" class="btn btn-default" routerLink="/home">Submit</button>
+    </form>
+  </div>
