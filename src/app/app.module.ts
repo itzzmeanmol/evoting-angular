@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
 import { EvotingModule } from './evoting/evoting.module';
+
+// import { Voter } from './evoting/model.module';
+
+
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { EvotingModule } from './evoting/evoting.module';
 
   ],
   providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

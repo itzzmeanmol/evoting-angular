@@ -1,0 +1,48 @@
+<div class="container">
+    <h2 style="text-align: center;">Candidate Login</h2>
+    <div class="text-center m-2" *ngIf="candidateSent">
+        <h3>Candidate approval is pending, try after some time!</h3>
+        <button type="submit" class="btn btn-default" routerLink = "/home">Go to Home</button>
+    </div>
+    <form *ngIf="!candidateSent" #form="ngForm" (ngSubmit)="submitCandidate(form)" class="m-2">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required #name="ngModel" [(ngModel)]="candidate.name">
+      </div>
+
+      <div class="form-group">
+        <label for="vin">VIN:</label>
+        <input type="number" class="form-control" id="vin" placeholder="Enter vin" name="vin" required #vin="ngModel" [(ngModel)]="candidate.vin">
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" required #city="ngModel" [(ngModel)]="candidate.city">
+      </div>
+
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter age" name="age" required #age="ngModel" [(ngModel)]="candidate.age">
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" class="form-control" id="gender" placeholder="Enter gender" name="gender" required #gender="ngModel" [(ngModel)]="candidate.gender">
+      </div>
+
+      <div class="form-group">
+        <label for="partyname">Party Name:</label>
+        <input type="text" class="form-control" id="partyname" placeholder="Enter partyname" name="partyname" required #partyname="ngModel" [(ngModel)]="candidate.partyname">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required #password="ngModel" [(ngModel)]="candidate.password">
+      </div>
+
+
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
