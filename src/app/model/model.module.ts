@@ -6,6 +6,9 @@ import { VoterRepository } from './voter.repository';
 import { RestDataSource } from './rest.datasource';
 import { CandidateRepository } from './candidate.repository';
 import { Candidate } from './candidate.model';
+import { UserSessionRepository } from './usersession.repository';
+import { UserSession } from './usersession.model';
+
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { Candidate } from './candidate.model';
     VoterRepository,
     RestDataSource,
     Candidate,
-    CandidateRepository
+    CandidateRepository,
+    UserSessionRepository,
+    UserSession
+ 
   ]
 })
 export class ModelModule { }

@@ -3,6 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Voter } from './voter.model';
 import { Candidate } from './candidate.model';
+import { Session } from 'protractor';
+import { UserSession } from './usersession.model';
+
 
 const PROTOCOL="http";
 const PORT=7070;
@@ -23,5 +26,10 @@ export class RestDataSource{
     getVoters():Observable<Voter[]>{
         return this.http.get<Voter[]>(this.baseUrl + "voterloginpage/all");
     }
+    saveUserSession(userSession:UserSession):Observable<UserSession>{
+        console.log(userSession);
+        return this.http.post<UserSession>(this.baseUrl+"all/usersession", userSession);
+    }
+    
 
 }
