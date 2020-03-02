@@ -21,7 +21,7 @@ export class RestDataSource{
         return this.http.post<Candidate>(this.baseUrl + "candidate", candidate);//candidate from submit button
     }
     getVoters():Observable<Voter[]>{
-        return this.http.get<Voter[]>(this.baseUrl + "loginpage/all");
+        return this.http.get<Voter[]>(this.baseUrl + "voterloginpage/all");
     }
 
 }
