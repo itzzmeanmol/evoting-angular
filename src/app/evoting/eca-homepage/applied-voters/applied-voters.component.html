@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">VoterName</th>
+        <th scope="col">VIN</th>
+        <th scope="col">City</th>
+        <th scope="col">Approval</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let voter of voters">
+        <!-- <th scope="row">1</th> -->
+        <td>{{voter.name}}</td>
+        <td>{{voter.vin}}</td>
+        <td>{{voter.city}}</td>
+        <td><button class="btn btn-success" (click)="approveVoter(voter)">Approve</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+
+    </tr>
+    </tbody>
+  </table>
