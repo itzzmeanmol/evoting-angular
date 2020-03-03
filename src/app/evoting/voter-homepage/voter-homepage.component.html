@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="details">
+        <h2>Hi {{name}}</h2>
+    </div>
+    <div class="block">
+        <button class="btn btn-primary" routerLink="/voterhomepage/updatedetails">Update Details</button>
+        <button class="btn btn-secondary" routerLink="/voterhomepage/viewcandidates">View Candidates</button>
+        <button class="btn btn-success">Q & A</button>
+        <button class="btn btn-danger" disabled>Voter</button>
+    </div>
+    <div class="logout">
+        <button class="btn btn-warning" (click)="logout()">logout</button>
+    </div>
+</div>
