@@ -11,5 +11,8 @@ export class EvotingComponent implements OnInit {
 
   ngOnInit() {
   }
+  pressme(){
+    console.log(sessionStorage.getItem("user"));
+  }
 
 }

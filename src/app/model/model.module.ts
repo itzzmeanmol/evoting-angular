@@ -6,8 +6,7 @@ import { VoterRepository } from './voter.repository';
 import { RestDataSource } from './rest.datasource';
 import { CandidateRepository } from './candidate.repository';
 import { Candidate } from './candidate.model';
-import { UserSessionRepository } from './usersession.repository';
-import { UserSession } from './usersession.model';
+
 
 
 
@@ -23,8 +22,7 @@ import { UserSession } from './usersession.model';
     RestDataSource,
     Candidate,
     CandidateRepository,
-    UserSessionRepository,
-    UserSession
+
  
   ]
 })

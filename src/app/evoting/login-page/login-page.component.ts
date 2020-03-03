@@ -3,8 +3,9 @@ import { VoterRepository } from 'app/model/voter.repository';
 import { Voter } from 'app/model/voter.model';
 import { Form, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserSession } from 'app/model/usersession.model';
-import { UserSessionRepository } from 'app/model/usersession.repository';
+import { CandidateRepository } from 'app/model/candidate.repository';
+import { Candidate } from 'app/model/candidate.model';
+
 
 
 @Component({
@@ -14,7 +15,7 @@ import { UserSessionRepository } from 'app/model/usersession.repository';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private voterRepository: VoterRepository, private voter: Voter, private router: Router, private userSession: UserSession, private userSessionRepository: UserSessionRepository) { }
+  constructor(private voterRepository: VoterRepository, private voter: Voter, private router: Router, private candidateRepository: CandidateRepository, private candidate: Candidate) { }
 
   get voters(): Voter[]{
     return this.voterRepository.getVoters();
@@ -32,6 +33,8 @@ export class LoginPageComponent implements OnInit {
   }
   
   selectedLevel;
+  uservin;
+  userpassword;
   data:Array<Object> = [
       {id: 0, name: "Voter"},
       {id: 1, name: "Candidate"},
@@ -40,25 +43,28 @@ export class LoginPageComponent implements OnInit {
   ];
 
   selected(){
-    console.log(this.selectedLevel.name);
+    
   }
 
   validateUser(){
-    console.log(this.voterRepository.getVoter(this.voter.vin))
-    if(this.voterRepository.getVoter(this.voter.vin)!=null && this.selectedLevel.name=="Voter"){
-      this.userSession.password = this.voter.password;
-      this.userSession.vin = this.voter.vin;
-      this.userSession.user = "voter";
-      console.log(this.userSession);
-      this.userSessionRepository.saveUserSession(this.userSession);
-      // this.router.navigate(['/home']);
-
+    if(this.voterRepository.getVoter(this.uservin).password==this.userpassword && this.selectedLevel.name=="Voter"){
+      console.log(this.voterRepository.getVoter(this.uservin));
+      sessionStorage.setItem("user",this.uservin);
+      sessionStorage.setItem("password",this.userpassword);
+      this.router.navigate(['/home']);
+    }
+    else if(this.candidateRepository.getCandidate(this.uservin).password==this.userpassword && this.selectedLevel.name=="Candidate"){
+      sessionStorage.setItem("user",this.uservin);
+      sessionStorage.setItem("password",this.userpassword);
+      this.router.navigate(['/home']);
     }
   }
   loginform(form:NgForm){
+   
     this.voterRepository.saveVoter
   }
   ngOnInit() {
+    console.log(sessionStorage.getItem("user"));
   }
 
 }
