@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="text-center"><h2>Election for {{city}}</h2></div>
+<table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Name</th>
+        <th scope="col">PartyName</th>
+        <th scope="col">Age</th>
+        <th scope="col">Vote</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidate of candidates">
+        <!-- <th scope="row">1</th> -->
+        <td>{{candidate.name}}</td>
+        <td>{{candidate.partyname}}</td>
+        <td>{{candidate.age}}</td>
+        <!-- <td><button class="" [disabled]="flagValue==1" (click)="castVote(candidate)">Vote</button></td> -->
+        <td><button [disabled]="clicked" (click)="castVote(candidate); clicked = true;">Vote</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
