@@ -7,6 +7,7 @@
         <th scope="col">City</th>
         <th scope="col">Approval</th>
         <th scope="col">Delete</th>
+        <th scope="col">Tick</th>
       </tr>
     </thead>
     <tbody>
@@ -16,8 +17,8 @@
         <td>{{voter.vin}}</td>
         <td>{{voter.city}}</td>
         <td><button class="btn btn-success" (click)="approveVoter(voter)">Approve</button></td>
-        <td><button class="btn btn-danger">Delete</button></td>
-
+        <td><button class="btn btn-danger" (click)="deleteVoter(voter)">Delete</button></td>
+        <!-- <td *ngIf="expression">ok</td> -->
     </tr>
     </tbody>
   </table>

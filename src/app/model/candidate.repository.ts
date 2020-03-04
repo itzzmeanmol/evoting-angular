@@ -15,20 +15,19 @@ export class CandidateRepository{
         });
     }
 
-    getCandidates(): Candidate[]{
-        return this.candidates;
+    getCandidates(city: string): Candidate[]{
+        return this.candidates.filter(c=>city==c.city && c.flag==1);
     }
     saveCandidate(candidate:Candidate):Observable<Candidate>{
         return this.dataSource.saveCandidate(candidate);
     }
-    getVin():number[]{
-        return this.vins;
-    }
-    getPassword():string[]{
-        return this.password;
-    }
+
     getCandidate(vin:number):Candidate{
         return this.candidates.find(v=>vin==v.vin);
+    }
+
+    addVote(candidate:Candidate):Observable<Candidate>{
+        return this.dataSource.addVote(candidate);
     }
 
 }

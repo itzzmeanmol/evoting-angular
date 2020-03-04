@@ -20,6 +20,11 @@ export class AppliedVotersComponent implements OnInit {
   approveVoter(voter: Voter){
     console.log(voter);
     this.voterRepository.updateFlag(voter).subscribe();
+    location.reload();
+  }
+  deleteVoter(voter: Voter){
+    this.voterRepository.deleteVoter(voter).subscribe();
+    location.reload();
   }
 
 }

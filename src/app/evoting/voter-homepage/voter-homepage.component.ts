@@ -22,6 +22,9 @@ export class VoterHomepageComponent implements OnInit {
   logout(){
     sessionStorage.removeItem("user");
     sessionStorage.removeItem("password");
-    this.router.navigate(['/home']);
+    window.location.href = '/home';
+    // this.router.navigate(['/home']);
   }
+
+  
 }

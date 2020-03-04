@@ -8,6 +8,17 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ModelModule } from 'app/model/model.module';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { VoterHomepageComponent } from './voter-homepage/voter-homepage.component';
+import { CandidateHomepageComponent } from './candidate-homepage/candidate-homepage.component';
+import { ViewCandidateDetailsComponent } from './voter-homepage/view-candidate-details/view-candidate-details.component';
+import { EcaHomepageComponent } from './eca-homepage/eca-homepage.component';
+import { AppliedCandidatesComponent } from './eca-homepage/applied-candidates/applied-candidates.component';
+import { AppliedVotersComponent } from './eca-homepage/applied-voters/applied-voters.component';
+import { CastVoteComponent } from './voter-homepage/cast-vote/cast-vote.component';
+import { VoterLogoutComponent } from './voter-homepage/voter-logout/voter-logout.component';
+import { EssHomepageComponent } from './ess-homepage/ess-homepage.component';
+import { EnableVotingComponent } from './ess-homepage/enable-voting/enable-voting.component';
+import { DisableVotingComponent } from './ess-homepage/disable-voting/disable-voting.component';
 
 
 
@@ -22,7 +33,18 @@ import { LoginPageComponent } from './login-page/login-page.component';
     VoterLoginComponent,
     SelectionComponent,
     CandidateLoginComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    VoterHomepageComponent,
+    CandidateHomepageComponent,
+    ViewCandidateDetailsComponent,
+    EcaHomepageComponent,
+    AppliedCandidatesComponent,
+    AppliedVotersComponent,
+    CastVoteComponent,
+    VoterLogoutComponent,
+    EssHomepageComponent,
+    EnableVotingComponent,
+    DisableVotingComponent
   ],
   imports: [
 

@@ -16,8 +16,8 @@ export class VoterLogoutComponent implements OnInit {
   }
 
   pressme(){
-    location.reload();
-    this.router.navigate(['/home']);
+    window.location.href = "/home";
+    // this.router.navigate(['/home']);
   }
 
 }

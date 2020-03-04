@@ -17,8 +17,11 @@
         <td>{{candidate.partyname}}</td>
         <td>{{candidate.age}}</td>
         <!-- <td><button class="" [disabled]="flagValue==1" (click)="castVote(candidate)">Vote</button></td> -->
-        <td><button [disabled]="clicked" (click)="castVote(candidate); clicked = true;">Vote</button></td>
+        <td><button [disabled]="clicked || flagValue==1" (click)="castVote(candidate); clicked = true;">Vote</button></td>
       </tr>
     </tbody>
   </table>
+  <div>
+    <button class="btn btn-secondary" routerLink="/voterhomepage">Back</button>
+  </div>
 </div>

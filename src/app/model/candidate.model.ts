@@ -10,6 +10,7 @@ export class Candidate{
         public gender?: string;
         public partyname?: string;
         public password?: string;
+        public flag?: number = Number(0);
         // public formdata?: FormData;
 
     clear(){
@@ -17,5 +18,6 @@ export class Candidate{
         this.name = this.vin = this.city = this.age = this.partyname = this.gender = null;
         // this.formdata = null;
         this.password = null;
+        this.flag = null;
     }
 }

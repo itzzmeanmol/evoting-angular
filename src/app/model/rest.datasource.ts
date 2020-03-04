@@ -31,4 +31,19 @@ export class RestDataSource{
         return this.http.get<Candidate[]>(this.baseUrl + "candidateloginpage/all");
     }
 
+    saveFlag(voter: Voter): Observable<Voter>{
+        const baseUrl=this.baseUrl+"updateflag";
+       return this.http.post<Voter>(baseUrl,voter);
+    }
+    deleteVoter(voter: Voter): Observable<Voter>{
+        return this.http.post<Voter>(this.baseUrl+"/deletevoter",voter);
+    }
+
+    addVote(candidate: Candidate):Observable<Candidate>{
+        return this.http.post<Candidate>(this.baseUrl+"/addvote", candidate);
+    }
+
+    castVote(voter: Voter):Observable<Voter>{
+        return this.http.post<Voter>(this.baseUrl+"/castvote",voter);
+    }
 }

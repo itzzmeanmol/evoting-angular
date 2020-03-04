@@ -13,18 +13,18 @@
         </div>
         <div class="form-group" >
             <label for="vin">VIN:</label>
-            <input type="number" class="form-control" id="vin" placeholder="Enter VIN" name="vin" required #uservinn="ngModel" [(ngModel)]="uservin" >
+            <input type="number" class="form-control" id="vin" placeholder="Enter VIN" name="uservin" required #uservinn="ngModel" [(ngModel)]="uservin" >
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required #userpasswordd="ngModel" [(ngModel)]= userpassword>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="userpassword" required #userpasswordd="ngModel" [(ngModel)]= "userpassword">
         </div>
         <div class="form-group">
             <button class="btn btn-primary" type="submit" (click)="validateUser()">Login</button>
             
         </div>
     </form>
-    <button class="btn btn-primary" routerLink="/selection">Signup</button>
+    <button class="btn btn-primary" (click)="pressme()">Signup</button>
 </div>
 
 
