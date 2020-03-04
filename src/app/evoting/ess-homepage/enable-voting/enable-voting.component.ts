@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-enable-voting',
   templateUrl: './enable-voting.component.html',
@@ -14,5 +15,4 @@ export class EnableVotingComponent implements OnInit {
   enableform(form:NgForm){
     
   }
-
 }

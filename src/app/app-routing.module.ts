@@ -18,6 +18,7 @@ import { DisableVotingComponent } from './evoting/ess-homepage/disable-voting/di
 import { EnableVotingComponent } from './evoting/ess-homepage/enable-voting/enable-voting.component';
 
 
+
 const routes: Routes = [
   {path: "home", component: EvotingComponent},
   {path: "voterlogin", component: VoterLoginComponent},

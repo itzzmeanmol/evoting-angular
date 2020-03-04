@@ -19,6 +19,8 @@ import { VoterLogoutComponent } from './voter-homepage/voter-logout/voter-logout
 import { EssHomepageComponent } from './ess-homepage/ess-homepage.component';
 import { EnableVotingComponent } from './ess-homepage/enable-voting/enable-voting.component';
 import { DisableVotingComponent } from './ess-homepage/disable-voting/disable-voting.component';
+// import { EnableVotingComponent } from './ess-homepage/enable-voting/enable-voting.component';
+// import { DisableVotingComponent } from './ess-homepage/disable-voting/disable-voting.component';
 
 
 
