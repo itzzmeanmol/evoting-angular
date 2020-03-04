@@ -9,9 +9,13 @@ export class CandidateRepository{
     private candidates: Candidate[]=[];
     private vins:number[]=[];
     private password:string[]=[];
+    private results: [] = [];
     constructor(private dataSource:RestDataSource){
         dataSource.getCandidates().subscribe(data=>{
             this.candidates=data;
+        });
+        dataSource.getResults().subscribe(data=>{
+            this.results=data;
         });
     }
 
@@ -29,8 +33,10 @@ export class CandidateRepository{
     addVote(candidate:Candidate):Observable<Candidate>{
         return this.dataSource.addVote(candidate);
     }
-    // getCandidatesHighest(city: string): Candidate[]{
-    //     this.candidates.filter(c=>city==c.city && c.flag==1);
-    // }
+
+    getResults():[]{
+        return this.results;
+    }
+
 
 }

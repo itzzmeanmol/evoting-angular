@@ -14,7 +14,7 @@ export class ViewCandidateDetailsComponent implements OnInit {
   constructor(private candidate: Candidate, private candidateRepository: CandidateRepository, private voter: Voter, private voterRepository: VoterRepository) { }
 
   get candidates(): Candidate[]{
-    console.log(this.voterRepository.getVoter(Number(sessionStorage.getItem("user"))));
+    console.log(this.candidateRepository.getCandidates(this.voterRepository.getVoter(Number(sessionStorage.getItem("user"))).city));
     return this.candidateRepository.getCandidates(this.voterRepository.getVoter(Number(sessionStorage.getItem("user"))).city);
   }
   ngOnInit() {

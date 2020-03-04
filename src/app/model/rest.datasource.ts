@@ -65,4 +65,8 @@ export class RestDataSource{
     getEssFlag():Observable<Ess[]>{
         return this.http.get<Ess[]>(this.baseUrl+"getess");
     }
+
+    getResults():Observable<[]>{
+        return this.http.get<[]>(this.baseUrl+"showresults");
+    }
 }

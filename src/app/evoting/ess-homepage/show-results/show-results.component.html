@@ -1,4 +1,12 @@
-<table class="table">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="/home">Evoting System</a>
+   
+    <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+        
+    </div>
+  </nav>
+<div class="container">
+<table class="table table-striped">
     <thead>
       <tr>
         <!-- <th scope="col">#</th> -->
@@ -10,9 +18,11 @@
     <tbody>
       <tr *ngFor="let candidate of candidates">
         <!-- <th scope="row">1</th> -->
-        <td>{{candidate.name}}</td>
-        <td>{{candidate.partyname}}</td>
-        <td>{{candidate.votecout}}</td>
+        <td>{{candidate[0]}}</td>
+        <td>{{candidate[1]}}</td>
+        <td>{{candidate[2]}}</td>
       </tr>
     </tbody>
+    <button (click)="pressme()">Exit</button>
   </table>
+</div>

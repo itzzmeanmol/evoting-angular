@@ -1,4 +1,20 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="/home">Evoting System</a>
+   
+    <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/loginpage" >Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
-    <button class="btn-primary" type="submit" routerLink="/voterlogin">VOTER</button>
-    <button class="btn-primary" type="submit" routerLink="/candidatelogin">CANDIDATE</button>
+    <div class="text-center">
+        <h1 style="margin-top: 30px;">Select Category</h1>
+    </div>
+    <div style="margin-top: 80px !important; margin-left: 280px !important; padding: 50px !important; box-shadow: 10px 10px 8px 10px #888888; width: fit-content !important;">
+    <button class="btn-secondary" type="submit" routerLink="/voterlogin" style="width: 200px; height: 200px;">VOTER</button>
+    <button class="btn-secondary" type="submit" routerLink="/candidatelogin" style="width: 200px; height: 200px; margin-left: 50px !important;">CANDIDATE</button>
+</div>
 </div>
