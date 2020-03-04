@@ -18,12 +18,13 @@ export class VoterHomepageComponent implements OnInit {
   ngOnInit() {
     this.name = this.voterRepository.getVoter(Number(sessionStorage.getItem("user"))).name;
   }
+  clicked: boolean = this.voterRepository.enableButton;
+   
 
   logout(){
     sessionStorage.removeItem("user");
     sessionStorage.removeItem("password");
     window.location.href = '/home';
-    // this.router.navigate(['/home']);
   }
 
   

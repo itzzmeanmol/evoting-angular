@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Tck } from 'app/model/tck.model';
+import { TckRepository } from 'app/model/tck.repository';
 
 @Component({
   selector: 'app-ess-homepage',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EssHomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tck: Tck, private tckRepository:TckRepository) { }
 
   ngOnInit() {
   }
@@ -20,6 +22,9 @@ export class EssHomepageComponent implements OnInit {
   }
   tckButton(){
     var randomstring = Math.random().toString(36).slice(-8);
+    this.tck.tck = randomstring;
+    this.tck.id = Number(1);
+    this.tckRepository.saveTck(this.tck).subscribe();
     alert("Copy this TCK password: "+randomstring);
   }
 

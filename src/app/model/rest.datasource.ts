@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Voter } from './voter.model';
 import { Candidate } from './candidate.model';
 import { Session } from 'protractor';
+import { Tck } from './tck.model';
 
 
 
@@ -36,14 +37,23 @@ export class RestDataSource{
        return this.http.post<Voter>(baseUrl,voter);
     }
     deleteVoter(voter: Voter): Observable<Voter>{
-        return this.http.post<Voter>(this.baseUrl+"/deletevoter",voter);
+        return this.http.post<Voter>(this.baseUrl+"deletevoter",voter);
     }
 
     addVote(candidate: Candidate):Observable<Candidate>{
-        return this.http.post<Candidate>(this.baseUrl+"/addvote", candidate);
+        return this.http.post<Candidate>(this.baseUrl+"addvote", candidate);
     }
 
     castVote(voter: Voter):Observable<Voter>{
-        return this.http.post<Voter>(this.baseUrl+"/castvote",voter);
+        return this.http.post<Voter>(this.baseUrl+"castvote",voter);
+    }
+
+    saveTck(tck: Tck):Observable<Tck>{
+        console.log(tck);
+        return this.http.post<Tck>(this.baseUrl+"savetck",tck);
+    }
+
+    getTck():Observable<Tck[]>{
+        return this.http.get<Tck[]>(this.baseUrl+"gettck");
     }
 }

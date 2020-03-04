@@ -6,6 +6,8 @@ import { VoterRepository } from './voter.repository';
 import { RestDataSource } from './rest.datasource';
 import { CandidateRepository } from './candidate.repository';
 import { Candidate } from './candidate.model';
+import { TckRepository } from './tck.repository';
+import { Tck } from './tck.model';
 
 
 
@@ -22,6 +24,8 @@ import { Candidate } from './candidate.model';
     RestDataSource,
     Candidate,
     CandidateRepository,
+    TckRepository,
+    Tck
 
  
   ]
