@@ -9,7 +9,7 @@ export class VoterRepository{
     private voters: Voter[]=[];
     private vins:number[] = [];
     private password:string[] = [];
-    public enableButton: boolean = true;
+    // public enableButton: boolean = true;
 
     constructor(private dataSource:RestDataSource){
         dataSource.getVoters().subscribe(data=>{

@@ -5,6 +5,7 @@ import { Voter } from './voter.model';
 import { Candidate } from './candidate.model';
 import { Session } from 'protractor';
 import { Tck } from './tck.model';
+import { Ess } from './ess.model';
 
 
 
@@ -55,5 +56,13 @@ export class RestDataSource{
 
     getTck():Observable<Tck[]>{
         return this.http.get<Tck[]>(this.baseUrl+"gettck");
+    }
+
+    saveEssFlag(ess: Ess):Observable<Ess>{
+        return this.http.post<Ess>(this.baseUrl+"saveess", ess);
+    }
+
+    getEssFlag():Observable<Ess[]>{
+        return this.http.get<Ess[]>(this.baseUrl+"getess");
     }
 }

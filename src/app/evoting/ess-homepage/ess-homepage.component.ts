@@ -14,6 +14,7 @@ export class EssHomepageComponent implements OnInit {
   ngOnInit() {
   }
   enableButton(){
+    
     window.location.href = '/esshomepage/enablevoting';
 
   }

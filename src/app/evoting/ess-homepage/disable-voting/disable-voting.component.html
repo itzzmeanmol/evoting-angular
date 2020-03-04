@@ -1,6 +1,6 @@
 <div class="container">
 
-    <form class="m-2" #form="ngForm" (ngSubmit)="disableform(form)">
+    <form class="m-2" #form="ngForm" (ngSubmit)="enableform(form)">
         <div class="form-group" >
             <label for="esspassword">Ess Password:</label>
             <input type="password" class="form-control" placeholder="Enter Ess Password" name="esspassword" required #esspass="ngModel" [(ngModel)]="esspassword" >
@@ -10,7 +10,7 @@
             <input type="password" class="form-control" placeholder="Enter Tck Password" name="tckpassword" required #tckpass="ngModel" [(ngModel)]="tckpassword" >
         </div>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit" (click)="disableVoting()">Disable</button> 
+            <button class="btn btn-primary" type="submit" (click)="disableVoting()">Enable</button> 
         </div>
     </form>
 </div>

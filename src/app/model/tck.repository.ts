@@ -6,14 +6,11 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class TckRepository{
     private tcks: Tck[] = [];
-    private var: Tck[] = [];
     constructor(private dataSource: RestDataSource){
         dataSource.getTck().subscribe(data=>{
             this.tcks = data;
-            this.var = data;
             console.log(this.tcks);
         });
-        // console.log(this.tcks);
     }
     
 
@@ -21,7 +18,6 @@ export class TckRepository{
         return this.dataSource.saveTck(tck);
     }
     getTck(): Tck[]{
-        console.log(this.var);
-        return this.var;
+        return this.tcks;
     }
 }

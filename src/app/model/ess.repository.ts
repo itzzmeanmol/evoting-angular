@@ -8,10 +8,19 @@ import { Ess } from './ess.model';
 
 @Injectable()
 export class EssRepository{
-
-    constructor(dataSource: RestDataSource){}
-
-    getFlag(): Observable<Ess>{
-        return null;
+    private esss: Ess[] = [];
+    constructor(private dataSource: RestDataSource){
+        dataSource.getEssFlag().subscribe(data=>{
+            this.esss = data;
+            console.log(this.esss);
+        });
     }
+
+   saveEssFlag(ess:Ess):Observable<Ess>{
+       return this.dataSource.saveEssFlag(ess);
+   }
+    getEssFlag():Ess[]{
+        return this.esss;
+    }
+
 }

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 @Injectable({providedIn: 'root'},)
 export class Ess{
-    private id?: number;
-    private flag?: number;
+    public id?: number = 1;
+    public ess?: number = 1;
 
     clear(){
-        this.id = this.flag = null;
+        this.id = this.ess = null;
     }
 }

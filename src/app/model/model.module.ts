@@ -8,6 +8,8 @@ import { CandidateRepository } from './candidate.repository';
 import { Candidate } from './candidate.model';
 import { TckRepository } from './tck.repository';
 import { Tck } from './tck.model';
+import { Ess } from './ess.model';
+import { EssRepository } from './ess.repository';
 
 
 
@@ -25,7 +27,9 @@ import { Tck } from './tck.model';
     Candidate,
     CandidateRepository,
     TckRepository,
-    Tck
+    Tck,
+    Ess,
+    EssRepository
 
  
   ]

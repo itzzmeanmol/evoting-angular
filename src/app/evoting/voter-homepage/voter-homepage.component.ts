@@ -4,6 +4,8 @@ import { VoterRepository } from 'app/model/voter.repository';
 import { stringify } from 'querystring';
 import { Session } from 'protractor';
 import { Router } from '@angular/router';
+import { EssRepository } from 'app/model/ess.repository';
+import { Ess } from 'app/model/ess.model';
 
 @Component({
   selector: 'app-voter-homepage',
@@ -13,13 +15,16 @@ import { Router } from '@angular/router';
 export class VoterHomepageComponent implements OnInit {
 
   private name: string;
-  constructor(private voter: Voter, private voterRepository: VoterRepository, private router: Router) { }
+  private enable: number;
+
+  constructor(private voter: Voter, private voterRepository: VoterRepository, private router: Router, private essRepository: EssRepository, private ess1: Ess) { }
 
   ngOnInit() {
     this.name = this.voterRepository.getVoter(Number(sessionStorage.getItem("user"))).name;
+    // this.enable = this.essRepository.getEss()[0].ess;
+    // console.log(this.essRepository.getEssFlag()[0].ess);
+    
   }
-  clicked: boolean = this.voterRepository.enableButton;
-   
 
   logout(){
     sessionStorage.removeItem("user");
@@ -27,5 +32,9 @@ export class VoterHomepageComponent implements OnInit {
     window.location.href = '/home';
   }
 
+
+  get enableFlag(){
+    return this.essRepository.getEssFlag();
+  }
   
 }
