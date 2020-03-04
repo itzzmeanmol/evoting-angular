@@ -29,4 +29,8 @@ export class EssHomepageComponent implements OnInit {
     alert("Copy this TCK password: "+randomstring);
   }
 
+  showResults(){
+    window.location.href='/esshomepage/showresults';
+  }
+
 }

@@ -29,5 +29,8 @@ export class CandidateRepository{
     addVote(candidate:Candidate):Observable<Candidate>{
         return this.dataSource.addVote(candidate);
     }
+    // getCandidatesHighest(city: string): Candidate[]{
+    //     this.candidates.filter(c=>city==c.city && c.flag==1);
+    // }
 
 }

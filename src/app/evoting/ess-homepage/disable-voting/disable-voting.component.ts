@@ -31,6 +31,7 @@ export class DisableVotingComponent implements OnInit {
       this.ess.id = Number(1);
       // this.essRepository.saveEss(this.ess).subscribe();
       this.essRepository.saveEssFlag(this.ess).subscribe();
+      window.location.href='/esshomepage';
       
     }
     else{
