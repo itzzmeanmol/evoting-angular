@@ -1,7 +1,20 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="/home">Evoting System</a>
+   
+    <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a class="nav-link"  role="button" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
 <div class="container">
     <div class="center">
-        <h1 style="text-align:center">ECA Home Page! </h1>
+        <h1 class="text-center" style="margin-top: 30px;">ECA Home Page! </h1>
     </div>
-    <button class="btn btn-primary" routerLink="/ecahomepage/appliedvoters" style="margin: 50px;" >View Voters</button>
-    <button class="btn btn-secondary" routerLink="/ecahomepage/appliedcandidates" style="margin: 50px;">View Candidates</button>
+    <div class="text-center">
+    <button class="btn btn-primary" routerLink="/ecahomepage/appliedvoters" style="margin: 50px; box-sizing: border-box; width: 200px; height: 200px;" >View Voters</button>
+    <button class="btn btn-secondary" routerLink="/ecahomepage/appliedcandidates" style="margin: 50px; box-sizing: border-box; width: 200px; height: 200px;;">View Candidates</button>
+</div>
 </div>

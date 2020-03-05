@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class EcaHomepageComponent implements OnInit {
 
   constructor() { }
-
+  logout(){
+    sessionStorage.removeItem("user");
+    sessionStorage.removeItem("password");
+    window.location.href='/home';
+  }
   ngOnInit() {
   }
 

@@ -17,6 +17,8 @@ import { EssHomepageComponent } from './evoting/ess-homepage/ess-homepage.compon
 import { DisableVotingComponent } from './evoting/ess-homepage/disable-voting/disable-voting.component';
 import { EnableVotingComponent } from './evoting/ess-homepage/enable-voting/enable-voting.component';
 import { ShowResultsComponent } from './evoting/ess-homepage/show-results/show-results.component';
+import { ViewCandidatesComponent } from './evoting/candidate-homepage/view-candidates/view-candidates.component';
+
 
 
 
@@ -38,7 +40,7 @@ const routes: Routes = [
   {path: "esshomepage/disablevoting", component: DisableVotingComponent},
   {path: "esshomepage/enablevoting", component: EnableVotingComponent},
   {path: "esshomepage/showresults", component: ShowResultsComponent},
-  {path: "candidatehomepage/viewcandidates", component: ViewCandidateDetailsComponent},
+  {path: "candidatehomepage/viewcandidates", component: ViewCandidatesComponent},
 
   {path: "**", redirectTo:"/home"}//default known as fallback mechanism
 ];

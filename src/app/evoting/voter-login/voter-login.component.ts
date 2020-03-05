@@ -24,6 +24,9 @@ export class VoterLoginComponent implements OnInit {
 
   ngOnInit() {
   }
+  pressme(){
+    window.location.href = '/home';
+  }
 
   submitVoter(form:NgForm){
     this.submitted=true;

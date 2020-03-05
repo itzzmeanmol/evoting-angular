@@ -1,14 +1,20 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="/home">Evoting System</a>
+   
+    <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a class="nav-link"  role="button" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
 <div class="container">
-    <div class="enable">
-        <button class="btn-success btn" (click)="enableButton()">Enable Voting</button>
-    </div>
-    <div class="disable">
-        <button class="btn-danger btn" (click)="disableButton()">Disable Voting</button>
-    </div>
-    <div class="tck">
-        <button class="btn-secondary btn" (click)="tckButton()">Generate TCK</button>
-    </div>
-    <div class="result">
-        <button class="btn-warning btn"  (click)="showResults()">Show Results</button>
+    <h1 class="text-center">ESS Dashboard</h1>
+    <div class="text-center">
+        <button class="btn-success btn" (click)="enableButton()" style="width: 150px !important; height: 100px !important; margin: 30px;">Enable Voting</button>
+        <button class="btn-danger btn" (click)="disableButton()" style="width: 150px !important; height: 100px !important; margin: 30px;">Disable Voting</button>
+        <button class="btn-secondary btn" (click)="tckButton()"style="width: 150px !important; height: 100px !important; margin: 30px;">Generate TCK</button>
+        <button class="btn-warning btn"  (click)="showResults()"style="width: 150px !important; height: 100px !important; margin: 30px;">Show Results</button>
     </div>
 </div>

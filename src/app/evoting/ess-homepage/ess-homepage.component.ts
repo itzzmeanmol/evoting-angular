@@ -29,6 +29,11 @@ export class EssHomepageComponent implements OnInit {
     alert("Copy this TCK password: "+randomstring);
   }
 
+  logout(){
+    sessionStorage.removeItem("user");
+    sessionStorage.removeItem("password");
+    window.location.href='/home';
+  }
   showResults(){
     window.location.href='/esshomepage/showresults';
   }

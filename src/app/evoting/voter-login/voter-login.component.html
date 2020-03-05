@@ -13,7 +13,7 @@
     <h2 style="text-align: center; margin-top: 30px !important;">Voter Login</h2>
     <div class="text-center m-2" *ngIf="voterSent">
         <h3>Voter approval is pending, try after some time!</h3>
-        <button type="submit" class="btn btn-default" routerLink = "/home">Go to Home</button>
+        <button type="submit" class="btn btn-default" (click)="pressme()">Go to Home</button>
     </div>
     <form *ngIf="!voterSent" #form="ngForm" (ngSubmit)="submitVoter(form)" class="m-2" style="width: 700px; margin-left: 200px !important; margin-top: 50px !important; box-shadow: 5px 10px 8px 10px #888888;padding: 50px !important;">
       <div class="form-group">
@@ -38,6 +38,6 @@
 
 
 
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default" >Submit</button>
     </form>
   </div>

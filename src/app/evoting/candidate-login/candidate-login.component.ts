@@ -21,7 +21,9 @@ export class CandidateLoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  pressme(){
+    window.location.href = '/home';
+  }
   submitCandidate(form:NgForm){
     this.submitted=true;
     if(form.valid){

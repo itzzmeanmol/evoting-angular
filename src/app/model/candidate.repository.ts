@@ -38,5 +38,16 @@ export class CandidateRepository{
         return this.results;
     }
 
+    getAllCandidates(): Candidate[]{
+        return this.candidates.filter(v=>v.flag==0);
+    }
+
+    updateFlag(candidate: Candidate):Observable<Candidate>{
+        console.log(candidate);
+        return this.dataSource.saveCandidateFlag(candidate);
+    }
+    deleteCandidate(candidate: Candidate):Observable<Candidate>{
+        return this.dataSource.deleteCandidate(candidate);
+    }
 
 }

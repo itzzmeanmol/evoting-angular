@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="/home">Evoting System</a>
+   
+    <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+        
+    </div>
+  </nav>
+  <div class="container">
+  <table class="table">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">Name</th>
+          <th scope="col">PartyName</th>
+          <th scope="col">Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let candidate of candidates">
+          <!-- <th scope="row">1</th> -->
+          <td>{{candidate.name}}</td>
+          <td>{{candidate.partyname}}</td>
+          <td>{{candidate.age}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <button class="btn btn-secondary" routerLink="/candidatehomepage">Back</button>
+    </div>
+  </div>

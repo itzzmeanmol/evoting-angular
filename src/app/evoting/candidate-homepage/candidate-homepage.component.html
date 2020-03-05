@@ -1,13 +1,28 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="/home">Evoting System</a>
+   
+    <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/candidatehomepage/updatedetails" >UpdateDetails</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" (click)="viewCandidates()">ViewCandidates</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="#">Q&A</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" (click)="logout()" role="button" >Logout</a>
+            </li>
+            
+        </ul>
+    </div>
+  </nav>
 <div class="container">
-    <div class="details">
-        <h2>Hi {{name}}</h2>
-    </div>
-    <div class="block">
-        <button class="btn btn-primary" routerLink="/candidatehomepage/updatedetails">Update Details</button>
-        <button class="btn btn-secondary" (click)="viewCandidates()">View Candidates</button>
-        <button class="btn btn-success">Q & A</button>
-    </div>
-    <div class="logout">
-        <button class="btn btn-warning" (click)="logout()">logout</button>
-    </div>
+    <div class="jumbotron">
+    <h1>Hi {{name}}</h1>
+          <p class="lead">Congratulations for representing your region and taking the responsibilities of your area. This is a fair election process in which only your constituency's voter will vote you. We hope you will meet the expectations of the citizens of India.</p>
+
+        </div>
 </div>
