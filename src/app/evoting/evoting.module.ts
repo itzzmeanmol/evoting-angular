@@ -21,6 +21,7 @@ import { EnableVotingComponent } from './ess-homepage/enable-voting/enable-votin
 import { DisableVotingComponent } from './ess-homepage/disable-voting/disable-voting.component';
 import { ShowResultsComponent } from './ess-homepage/show-results/show-results.component';
 import { ViewCandidatesComponent } from './candidate-homepage/view-candidates/view-candidates.component';
+import { VoterQuestionComponent } from './voter-homepage/voter-question/voter-question.component';
 
 
 
@@ -49,7 +50,8 @@ import { ViewCandidatesComponent } from './candidate-homepage/view-candidates/vi
     EnableVotingComponent,
     DisableVotingComponent,
     ShowResultsComponent,
-    ViewCandidatesComponent
+    ViewCandidatesComponent,
+    VoterQuestionComponent
   ],
   imports: [
 

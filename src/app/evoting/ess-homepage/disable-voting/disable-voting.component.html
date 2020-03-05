@@ -1,6 +1,17 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="/home">Evoting System</a>
+   
+    <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a class="nav-link"  role="button" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
 <div class="container">
 
-    <form class="m-2" #form="ngForm" (ngSubmit)="enableform(form)">
+    <form class="m-2" #form="ngForm" (ngSubmit)="enableform(form)" style="width: 700px; margin-left: 200px !important; margin-top: 50px !important; box-shadow: 5px 10px 8px 10px #888888;padding: 50px !important;">
         <div class="form-group" >
             <label for="esspassword">Ess Password:</label>
             <input type="password" class="form-control" placeholder="Enter Ess Password" name="esspassword" required #esspass="ngModel" [(ngModel)]="esspassword" >
@@ -10,7 +21,9 @@
             <input type="password" class="form-control" placeholder="Enter Tck Password" name="tckpassword" required #tckpass="ngModel" [(ngModel)]="tckpassword" >
         </div>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit" (click)="disableVoting()">Enable</button> 
+            <button class="btn btn-primary" type="submit" (click)="disableVoting()">Disable</button> 
         </div>
     </form>
+    <button class="btn btn-secondary" routerLink="/esshomepage" style="margin-left: 50px !important;">Back</button>
+    <button class="btn btn-secondary" routerLink="/esshomepage" style="margin-left: 9px !important;">Back</button>
 </div>

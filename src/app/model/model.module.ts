@@ -10,6 +10,8 @@ import { TckRepository } from './tck.repository';
 import { Tck } from './tck.model';
 import { Ess } from './ess.model';
 import { EssRepository } from './ess.repository';
+import { Qanda } from './qanda.model';
+import { QandaRepository } from './qanda.repository';
 
 
 
@@ -29,7 +31,9 @@ import { EssRepository } from './ess.repository';
     TckRepository,
     Tck,
     Ess,
-    EssRepository
+    EssRepository,
+    Qanda,
+    QandaRepository
 
  
   ]

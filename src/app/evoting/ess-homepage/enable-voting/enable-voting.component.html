@@ -1,6 +1,13 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="/home">Evoting System</a>
+   
+    <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+        
+    </div>
+  </nav>
 <div class="container">
 
-    <form class="m-2" #form="ngForm" (ngSubmit)="enableform(form)">
+    <form class="m-2" #form="ngForm" (ngSubmit)="enableform(form)" style="width: 700px; margin-left: 200px !important; margin-top: 50px !important; box-shadow: 5px 10px 8px 10px #888888;padding: 50px !important;">
         <div class="form-group" >
             <label for="esspassword">Ess Password:</label>
             <input type="password" class="form-control" placeholder="Enter Ess Password" name="esspassword" required #esspass="ngModel" [(ngModel)]="esspassword" >
@@ -11,6 +18,8 @@
         </div>
         <div class="form-group">
             <button class="btn btn-primary" type="submit" (click)="enableVoting()">Enable</button> 
+            <button class="btn btn-secondary" routerLink="/esshomepage" style="margin-left: 9px !important;">Back</button>
         </div>
     </form>
+    
 </div>

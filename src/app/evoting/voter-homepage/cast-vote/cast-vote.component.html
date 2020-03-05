@@ -17,7 +17,7 @@
         <td>{{candidate.partyname}}</td>
         <td>{{candidate.age}}</td>
         <!-- <td><button class="" [disabled]="flagValue==1" (click)="castVote(candidate)">Vote</button></td> -->
-        <td><button [disabled]="clicked || flagValue==1" (click)="castVote(candidate); clicked = true;">Vote</button></td>
+        <td><button [disabled]="clicked || flagValue==1" (click)="castVote(candidate); clicked = true;" class="btn btn-success">Vote</button></td>
       </tr>
     </tbody>
   </table>

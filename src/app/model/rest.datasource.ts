@@ -6,6 +6,7 @@ import { Candidate } from './candidate.model';
 import { Session } from 'protractor';
 import { Tck } from './tck.model';
 import { Ess } from './ess.model';
+import { Qanda } from './qanda.model';
 
 
 
@@ -81,5 +82,13 @@ export class RestDataSource{
 
     deleteCandidate(candidate: Candidate): Observable<Candidate>{
         return this.http.post<Candidate>(this.baseUrl+"deletecandidate",candidate);
+    }
+
+    getAllQanda():Observable<Qanda[]>{
+        return this.http.get<Qanda[]>(this.baseUrl+"getallqanda");
+    }
+
+    saveAllQanda(qanda: Qanda):Observable<Qanda>{
+        return this.http.post<Qanda>(this.baseUrl+"saveallqanda",qanda);
     }
 }
